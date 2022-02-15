@@ -18,7 +18,7 @@ services:
     cap_add:
       - IPC_LOCK
     # volumes:
-    #   - elasticsearch-data:/usr/share/elasticsearch/data
+    #   - "elasticsearch-data:/usr/share/elasticsearch/data"
     ports:
       - 9200:9200
       - 9300:9300
@@ -34,9 +34,12 @@ services:
     depends_on:
       - elasticsearch
 
-  # AgileKIP:
-  #   container_name: agileKIP
+  AgileKIP:
+    container_name: agilekip.v0.0.12
+    image: agilekip/generator-jhipster-agilekip:v0.0.12
+    volumes:
+      - "agile-kip-data:/home/jhipster/app"
 
-# volumes:
-#   elasticsearch-data-volume:
-#     driver: local
+volumes:
+  elasticsearch-data:
+  agile-kip-data:
