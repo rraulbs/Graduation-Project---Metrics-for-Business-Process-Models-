@@ -2,12 +2,14 @@ version: '3.7'
 
 services:
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.0.0
     container_name: elasticsearch
     restart: always
     environment:
       - xpack.security.enabled=false
       - discovery.type=single-node
+    # networks:
+    #   - ek-net
     ulimits:
       memlock:
         soft: -1
@@ -17,29 +19,46 @@ services:
         hard: 65536
     cap_add:
       - IPC_LOCK
-    # volumes:
-    #   - "elasticsearch-data:/usr/share/elasticsearch/data"
+    volumes:
+      - ./elasticsearch-data:/usr/share/elasticsearch/data
+      # - "./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
     ports:
       - 9200:9200
       - 9300:9300
 
   kibana:
     container_name: kibana
-    image: docker.elastic.co/kibana/kibana:7.17.0
+    image: docker.elastic.co/kibana/kibana:8.0.0
     restart: always
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    # networks:
+    #   - ek-net
+    volumes:
+      - ./kibana-data:/usr/share/kibana/data
+      # - "./kibana.yml:/usr/share/kibana/config/kibana.yml"
     ports:
       - 5601:5601
     depends_on:
       - elasticsearch
 
-  AgileKIP:
-    container_name: agilekip.v0.0.12
-    image: agilekip/generator-jhipster-agilekip:v0.0.12
-    volumes:
-      - "agile-kip-data:/home/jhipster/app"
+
+  # camunda-image:
+  # ...
+
+  # AgileKIP:
+  #   container_name: agilekip.v0.0.12
+  #   image: agilekip/generator-jhipster-agilekip:v0.0.12
+  #   volumes:
+  #     - "agile-kip-data:/home/jhipster/app"
+
+# networks:
+#   ek-net:
+#     driver: bridge
 
 volumes:
   elasticsearch-data:
-  agile-kip-data:
+    driver: local
+  kibana-data:
+    driver: local
+  # agile-kip-data:
