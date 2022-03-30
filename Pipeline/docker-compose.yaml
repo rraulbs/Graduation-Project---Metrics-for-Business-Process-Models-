@@ -8,8 +8,8 @@ services:
     environment:
       - xpack.security.enabled=false
       - discovery.type=single-node
-    # networks:
-    #   - ek-net
+    networks:
+      - curl-net
     ulimits:
       memlock:
         soft: -1
@@ -32,8 +32,8 @@ services:
     restart: always
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
-    # networks:
-    #   - ek-net
+    networks:
+      - curl-net
     volumes:
       - ./kibana-data:/usr/share/kibana/data
       # - "./kibana.yml:/usr/share/kibana/config/kibana.yml"
@@ -42,23 +42,29 @@ services:
     depends_on:
       - elasticsearch
 
+  redhatimage:
+    build:
+      dockerfile: ./redhat.dockerfile
+      context: ./docker/
+    image: raul/staticmetrics
+    tty: true
+    container_name: staticmetrics
+    # ports:
+    # - "80:80"
+    networks:
+      - curl-net
+    depends_on:
+      - elasticsearch
+      - kibana 
+    # volumes:
+    #    - "./Load-processes/.../:/tmp/:rw"
 
-  # camunda-image:
-  # ...
-
-  # AgileKIP:
-  #   container_name: agilekip.v0.0.12
-  #   image: agilekip/generator-jhipster-agilekip:v0.0.12
-  #   volumes:
-  #     - "agile-kip-data:/home/jhipster/app"
-
-# networks:
-#   ek-net:
-#     driver: bridge
+networks:
+  curl-net:
+    driver: bridge
 
 volumes:
   elasticsearch-data:
     driver: local
   kibana-data:
     driver: local
-  # agile-kip-data:
