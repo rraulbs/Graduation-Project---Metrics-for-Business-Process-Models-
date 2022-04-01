@@ -56,8 +56,8 @@ services:
     depends_on:
       - elasticsearch
       - kibana 
-    # volumes:
-    #    - "./Load-processes/.../:/tmp/:rw"
+    volumes:
+       - "./docker/data:/tmp/:rw"
 
 networks:
   curl-net:
