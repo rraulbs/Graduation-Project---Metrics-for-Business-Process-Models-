@@ -42,22 +42,35 @@ services:
     depends_on:
       - elasticsearch
 
-  redhatimage:
+  staticmetrics:
     build:
-      dockerfile: ./redhat.dockerfile
+      dockerfile: ./staticmetrics.dockerfile
       context: ./docker/
     image: raul/staticmetrics
     tty: true
     container_name: staticmetrics
-    # ports:
-    # - "80:80"
     networks:
       - curl-net
     depends_on:
       - elasticsearch
       - kibana 
     volumes:
-       - "./docker/data:/tmp/:rw"
+       - "./docker/dataStaticMetrics:/tmp/:rw"
+
+  # dynamicmetrics:
+  #   build:
+  #     dockerfile: ./dynamicmetrics.dockerfile
+  #     context: ./docker/
+  #   image: raul/dynamicmetrics
+  #   tty: true
+  #   container_name: dynamicmetrics
+  #   networks:
+  #     - curl-net
+  #   depends_on:
+  #   - elasticsearch
+  #   - kibana
+  #   volumes:
+  #     -"./docker/dataDynamicMetrics:/tmp/:rw"
 
 networks:
   curl-net:
