@@ -12,11 +12,11 @@ function update_kibana() {
 
 function main () {
     current_date_time="`date "+%Y-%m-%d %H:%M:%S"`";
-    echo $current_date_time > redhat-ubi8-started.txt;
+    echo $current_date_time > redhat-static-metrics-started.txt;
     sleep 60;
     while true
     do
-        if [ ! -f "redhat-ubi8-started.txt" ] ; 
+        if [ ! -f "redhat-static-metrics-started.txt" ] ; 
         then
             exit 0
         fi
