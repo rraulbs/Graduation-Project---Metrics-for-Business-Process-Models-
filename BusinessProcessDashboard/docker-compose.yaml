@@ -1,0 +1,83 @@
+version: '3.7'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.0.0
+    container_name: elasticsearch
+    restart: always
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    networks:
+      - curl-net
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - ./elasticsearch-data:/usr/share/elasticsearch/data
+      # - "./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+  kibana:
+    container_name: kibana
+    image: docker.elastic.co/kibana/kibana:8.0.0
+    restart: always
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    networks:
+      - curl-net
+    volumes:
+      - ./kibana-data:/usr/share/kibana/data
+      # - "./kibana.yml:/usr/share/kibana/config/kibana.yml"
+    ports:
+      - 5601:5601
+    depends_on:
+      - elasticsearch
+
+  staticmetrics:
+    build:
+      dockerfile: ./staticmetrics.dockerfile
+      context: ./docker/
+    image: raul/staticmetrics
+    tty: true
+    container_name: staticmetrics
+    networks:
+      - curl-net
+    depends_on:
+      - elasticsearch
+      - kibana 
+    volumes:
+       - "./docker/dataStaticMetrics:/tmp/:rw"
+
+  # dynamicmetrics:
+  #   build:
+  #     dockerfile: ./dynamicmetrics.dockerfile
+  #     context: ./docker/
+  #   image: raul/dynamicmetrics
+  #   tty: true
+  #   container_name: dynamicmetrics
+  #   networks:
+  #     - curl-net
+  #   depends_on:
+  #   - elasticsearch
+  #   - kibana
+  #   volumes:
+  #     -"./docker/dataDynamicMetrics:/tmp/:rw"
+
+networks:
+  curl-net:
+    driver: bridge
+
+volumes:
+  elasticsearch-data:
+    driver: local
+  kibana-data:
+    driver: local
