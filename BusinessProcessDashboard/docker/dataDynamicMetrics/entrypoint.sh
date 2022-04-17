@@ -2,10 +2,10 @@
 set -eo pipefail
 
 function update_kibana() {
-    # Function: Get method
+    pwsh PrepareData.ps1;
     sleep 15;
     echo "Sending updates..."
-    # Fuunction: Post Method
+    curl -XPOST elasticsearch:9200/processes/_bulk -H "Content-Type: application/x-ndjson" --data-binary @"bulk.json";
     sleep 15;
 }
 
