@@ -1,4 +1,0 @@
-{"index":{"_id":"a1a4e863-be9b-11ec-b142-0242c0a8b006"}}
-{"id":"a1a4e863-be9b-11ec-b142-0242c0a8b006","processDefinitionKey":"ReviewInvoice","processDefinitionId":"ReviewInvoice:1:990ae894-be9b-11ec-b142-0242c0a8b006","minDurationInMillis":294349,"meanDurationInMillis":294349,"maxDurationInMillis":294349,"countInstance":1}
-{"index":{"_id":"a177bda9-be9b-11ec-b142-0242c0a8b006"}}
-{"id":"a177bda9-be9b-11ec-b142-0242c0a8b006","processDefinitionKey":"invoice","processDefinitionId":"invoice:2:9976067b-be9b-11ec-b142-0242c0a8b006","minDurationInMillis":432294354,"meanDurationInMillis":432294354,"maxDurationInMillis":432294354,"countInstance":1}

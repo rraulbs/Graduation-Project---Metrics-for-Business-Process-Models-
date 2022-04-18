@@ -1,3 +1,0 @@
-"id","processDefinitionKey","processDefinitionId","minDurationInMillis","meanDurationInMillis","maxDurationInMillis","countInstance"
-"a1a4e863-be9b-11ec-b142-0242c0a8b006","ReviewInvoice","ReviewInvoice:1:990ae894-be9b-11ec-b142-0242c0a8b006","294349","294349","294349","1"
-"a177bda9-be9b-11ec-b142-0242c0a8b006","invoice","invoice:2:9976067b-be9b-11ec-b142-0242c0a8b006","432294354","432294354","432294354","1"
