@@ -78,6 +78,7 @@ function CreateDataJson($csvImport, $Columns){
         }
         $csv+= $data
     }
+    $csv = $csv | Select-Object -Property * -ExcludeProperty id
     return $csv
 }
 
