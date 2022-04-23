@@ -53,10 +53,11 @@ $AllIntColumns = $TotalColumn + $ActivityTaskElements + $ActivitySubprocessEleme
 function CreateDataJson($csvImport){
     $csv = @()
     foreach ($row in $csvImport) {        
+        $id = $row.FileName
         $id = $($row.FileName).split('.')[0]
-        $id = $id.Split('_')[-1]
+        # $id = $id.Split('_')[-1]
         $index = Get-Content '.\indexPatten.json' | ConvertFrom-Json
-        $index.index._id = [int]$id
+        $index.index._id = $id
         $csv+= $index
         $data = $row
         foreach($column in $AllIntColumns){
@@ -73,7 +74,6 @@ function bulkJson($json){
     $bulk = ""
     while($file -match ',{'){
         $index = $file.IndexOf(',{')
-        $lastIndex = $file.length - 1
         $bulk += $file.Substring(0,$index) + "`n"
         $file = $file.Substring($index + 1)
     }

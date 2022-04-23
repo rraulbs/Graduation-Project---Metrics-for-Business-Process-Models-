@@ -33,7 +33,7 @@ https://.../#documentation
 # }
 
 
-$columns = @('id','processDefinitionKey','processDefinitionId','minDurationInMillis', 'meanDurationInMillis', 'maxDurationInMillis', 'countInstance')
+$columns = @('processDefinitionKey','processDefinitionId', 'processDefinitionVersion','minDurationInMillis', 'meanDurationInMillis', 'maxDurationInMillis', 'countInstance')
 $AllIntColumns =  @('minDurationInMillis', 'meanDurationInMillis', 'maxDurationInMillis', 'countInstance')
 function GetProcessIntancesMeasures($Columns){
     # Cria o processDefinitionId.json
@@ -44,16 +44,17 @@ function GetProcessIntancesMeasures($Columns){
         $processesInstances = $data | Where-Object {$_.processDefinitionId -eq $process}
         $listDuration = @()
         $min, $mean, $max = 0, 0, 0
-        $info = "" | Select-Object $columns
+        $info = "" | Select-Object $Columns
         foreach($instance in $processesInstances){
             if(![int]::IsNullOrEmpty -eq $instance.durationInMillis){
-                $info.id = $instance.id
-                $info.processDefinitionKey = $instance.processDefinitionKey
-                $info.processDefinitionId = $instance.processDefinitionId
                 $listDuration+= $instance.durationInMillis
             }
         }
         if(![int]::IsNullOrEmpty -eq $listDuration){
+            $info.processDefinitionId = $instance.processDefinitionId
+            $info.processDefinitionKey = $instance.processDefinitionKey
+            $info.processDefinitionVersion = $instance.processDefinitionVersion
+    
             $Measures = ($listDuration | Measure-Object -Average -Maximum -Minimum)
             $info.minDurationInMillis = $Measures.Minimum
             $info.meanDurationInMillis = $Measures.Average
@@ -70,7 +71,7 @@ function CreateDataJson($csvImport, $Columns){
     foreach ($row in $csvImport) {
         $data = $row
         $index = Get-Content '.\indexPatten.json' | ConvertFrom-Json
-        $index.index._id = $data.id
+        $index.index._id = $data.processDefinitionKey + "_" + $data.processDefinitionVersion + "_camunda"
 
         $csv+= $index
         foreach($column in $Columns){
@@ -88,7 +89,6 @@ function bulkJson($json){
     $bulk = ""
     while($file -match ',{'){
         $index = $file.IndexOf(',{')
-        $lastIndex = $file.length - 1
         $bulk += $file.Substring(0,$index) + "`n"
         $file = $file.Substring($index + 1)
     }

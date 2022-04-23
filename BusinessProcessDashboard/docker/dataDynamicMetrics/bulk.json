@@ -1,0 +1,8 @@
+{"index":{"_id":"invoice_1_camunda"}}
+{"processDefinitionKey":"invoice","processDefinitionId":"invoice:1:4d55eecd-c040-11ec-bfc2-0242ac1c0007","processDefinitionVersion":1,"minDurationInMillis":432818881,"meanDurationInMillis":432818881,"maxDurationInMillis":432818881,"countInstance":1}
+{"index":{"_id":"ReviewInvoice_1_camunda"}}
+{"processDefinitionKey":"ReviewInvoice","processDefinitionId":"ReviewInvoice:1:4d58d4ff-c040-11ec-bfc2-0242ac1c0007","processDefinitionVersion":1,"minDurationInMillis":804776,"meanDurationInMillis":811826,"maxDurationInMillis":818875,"countInstance":2}
+{"index":{"_id":"invoice_2_camunda"}}
+{"processDefinitionKey":"invoice","processDefinitionId":"invoice:2:4e05dde6-c040-11ec-bfc2-0242ac1c0007","processDefinitionVersion":2,"minDurationInMillis":432804783,"meanDurationInMillis":432804783,"maxDurationInMillis":432804783,"countInstance":1}
+{"index":{"_id":"processo_3_1_camunda"}}
+{"processDefinitionKey":"processo_3","processDefinitionId":"processo_3:1:5f66635d-c28f-11ec-961e-0242ac120007","processDefinitionVersion":1,"minDurationInMillis":3,"meanDurationInMillis":3,"maxDurationInMillis":3,"countInstance":1}
