@@ -1,5 +1,0 @@
-"processDefinitionKey","processDefinitionId","processDefinitionVersion","minDurationInMillis","meanDurationInMillis","maxDurationInMillis","countInstance"
-"invoice","invoice:1:4d55eecd-c040-11ec-bfc2-0242ac1c0007","1","432818881","432818881","432818881","1"
-"ReviewInvoice","ReviewInvoice:1:4d58d4ff-c040-11ec-bfc2-0242ac1c0007","1","804776","811825.5","818875","2"
-"invoice","invoice:2:4e05dde6-c040-11ec-bfc2-0242ac1c0007","2","432804783","432804783","432804783","1"
-"processo_3","processo_3:1:5f66635d-c28f-11ec-961e-0242ac120007","1","3","3","3","1"
