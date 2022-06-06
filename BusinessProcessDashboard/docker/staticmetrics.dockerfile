@@ -3,6 +3,8 @@ FROM redhat/ubi8:8.5
 USER root
 
 COPY /requirements.txt ./tmp
+COPY /StaticMetrics/ ./tmp
+COPY /StaticMetrics/entrypoint.sh ./
 
 # Install Python and PowerShell
 RUN dnf -y install python39 && \
@@ -14,4 +16,4 @@ RUN dnf -y install python39 && \
 WORKDIR /tmp
 
 EXPOSE 9200
-ENTRYPOINT ["/tmp/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
