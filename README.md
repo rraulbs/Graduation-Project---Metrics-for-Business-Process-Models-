@@ -1,7 +1,7 @@
 # Graduation-Project---Metrics-for-Business-Process-Models-
 
 <h4 align="center"> 
-	🚧  React Select 🚀 Em construção...  🚧
+	🚧  Project 🚀 Under construction...  🚧
 </h4>
 
 # :point_right: Project Description
