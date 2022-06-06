@@ -33,10 +33,16 @@ docker images
 ![image](https://user-images.githubusercontent.com/16651018/172214019-ce599148-9a10-46f1-8348-2902915f76bc.png)
 
 
-:heavy_check_mark: Clone the project to a local folder
+:heavy_check_mark: Clone this project to a local folder
 
 
 # :point_right: How to use
 
+- Make sure your docker is up and running: start docker desktop.
+
+- The docker-compose file is available in the following path: ***C:/.../Graduation-Project---Metrics-for-Business-Process-Models-/BusinessProcessDashboard/*** <br> Inside this folder, run the following command
+```
+	docker-compose -f docker-compose.yaml
+```
 
 # :point_right: Conclusion
