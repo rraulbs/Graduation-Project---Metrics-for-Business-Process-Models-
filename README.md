@@ -42,7 +42,8 @@ docker images
 
 - The docker-compose file is available in the following path: ***C:/.../Graduation-Project---Metrics-for-Business-Process-Models-/BusinessProcessDashboard/*** <br> Inside this folder, run the following command
 ```
-	docker-compose -f docker-compose.yaml
+	docker-compose -f docker-compose.yaml up -d
 ```
+![image](https://user-images.githubusercontent.com/16651018/172227426-e88b1bb1-fd2e-498a-923d-1f3cb46c1357.png)
 
 # :point_right: Conclusion
