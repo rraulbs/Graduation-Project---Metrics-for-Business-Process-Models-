@@ -1,0 +1,13 @@
+{
+    "doc":{
+      "processDefinitionKey":"null",
+      "processDefinitionId":"null",
+      "processDefinitionVersion":null,
+      "processInstanceHistory":{
+        "minProcessDurationInMillis":null,
+        "meanProcessDurationInMillis":null,
+        "maxProcessDurationInMillis":null,
+        "countProcessInstance":null
+      }
+    }
+}

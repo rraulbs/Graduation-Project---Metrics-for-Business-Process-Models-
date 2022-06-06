@@ -44,6 +44,7 @@ services:
 
   mysql-camunda:
     image: mysql:5.6
+    container_name: mysqlcamunda
     volumes:
         - ./camunda-data:/var/lib/mysql
     ports:
@@ -75,10 +76,10 @@ services:
       - dynamicmetrics
 
   staticmetrics:
-    build:
-      dockerfile: ./staticmetrics.dockerfile
-      context: ./docker/
-    image: raul/staticmetrics
+    # build:
+    #   dockerfile: ./staticmetrics.dockerfile
+    #   context: ./docker/
+    image: luarhub/staticmetrics
     tty: true
     container_name: staticmetrics
     networks:
@@ -87,13 +88,13 @@ services:
       - elasticsearch
       - kibana 
     volumes:
-      - "./docker/dataStaticMetrics:/tmp/:rw"
+      - "./static-metrics-data:/tmp/:rw"
 
   dynamicmetrics:
-    build:
-      dockerfile: ./dynamicmetrics.dockerfile
-      context: ./docker/
-    image: raul/dynamicmetrics
+    # build:
+    #   dockerfile: ./dynamicmetrics.dockerfile
+    #   context: ./docker/
+    image: luarhub/dynamicmetrics
     tty: true
     container_name: dynamicmetrics
     networks:
@@ -102,7 +103,7 @@ services:
       - elasticsearch
       - kibana
     volumes:
-      - "./docker/dataDynamicMetrics:/tmp/:rw"
+      - "./dynamic-metrics-data:/tmp/:rw"
 
 networks:
   curl-net:
