@@ -1,0 +1,12 @@
+{
+    "doc":{
+      "taskHistory":{
+        "taskName":{
+          "minTaskDurationInMillis":null,
+          "meanTaskDurationInMillis":null,
+          "maxTaskDurationInMillis":null,
+          "countTaskInstance":null
+        }
+      }
+    }
+}
