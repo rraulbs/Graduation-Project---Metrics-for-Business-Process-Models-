@@ -9,7 +9,11 @@ This page will bring you up to speed with the needed configurations and software
 
 # :point_right: Setup
 
-:heavy_check_mark: Make sure you have an editor to work with code like VSCode or another one of your choice.
+:heavy_check_mark: Make sure you have an editor to work with code like VSCode or another one of your choice. <br>
+https://code.visualstudio.com/
+
+:heavy_check_mark: Make sure you have git installed <br>
+https://git-scm.com/downloads
 
 :heavy_check_mark: Make sure you have camunda modeler installed (version 4.3.0) <br>
 https://downloads.camunda.cloud/release/camunda-modeler/4.3.0/
@@ -39,8 +43,12 @@ docker images
 ![image](https://user-images.githubusercontent.com/16651018/172214019-ce599148-9a10-46f1-8348-2902915f76bc.png)
 
 
-:heavy_check_mark: Clone this project to a local folder
-
+:heavy_check_mark: Clone this project to a local folder <br>
+Open the command prompt, choose a path to the project and run the command. <br>
+```
+git clone https://github.com/rraulbs/Graduation-Project---Metrics-for-Business-Process-Models-.git
+```
+![image](https://user-images.githubusercontent.com/16651018/172268602-33d68955-5d45-4b2c-a5f6-701af1f98964.png)
 
 # :point_right: How to use
 
