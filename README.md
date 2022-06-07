@@ -69,6 +69,19 @@ To have access to the services, open a web browser and enter the following ports
 :wrench: ***ElasticSearch (Kibana)***: http://localhost:5601/  ou http://127.0.0.1:5601/ <br>
 :wrench: ***Camunda platform***: http://localhost:8080/camunda/app/welcome/default/#!/login
 
+## Camunda Modeler
+### To analyze a new process
+
+1. Step: Model the process through Camunda Modeler <br>
+1. Save (process.xml file): <br>
+- Id: ```<ProcessName>_<Version> ``` <br>
+***p.s.*** The Id must have this format above, to map the process_id in later steps. <br>
+***p.s.*** The file name, must have this same id format <br>
+***p.s.*** Save the xml file in the following path: <br>
+***C:\...\Graduation-Project---Metrics-for-Business-Process-Models-\BusinessProcessDashboard\static-metrics-data\processes>***
+![image](https://user-images.githubusercontent.com/16651018/172481331-c91de7cd-5fa5-4983-a8fd-376d74f8ef6d.png)
+
+
 ## Camunda Platform
 
 # :point_right: Conclusion
