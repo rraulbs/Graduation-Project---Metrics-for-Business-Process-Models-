@@ -58,7 +58,7 @@ services:
       - curl-net
       
   camunda: # http://localhost:8080/camunda-welcome/index.html     Username: demo, Password: demo
-    image: camunda/camunda-bpm-platform:latest
+    image: camunda/camunda-bpm-platform:7.17.0
     container_name: camunda
     networks:
       - curl-net
