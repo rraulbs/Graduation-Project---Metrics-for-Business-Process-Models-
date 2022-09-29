@@ -1,0 +1,382 @@
+GET /processes/_search
+
+PUT /processes
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 3,
+      "number_of_replicas": 0
+    }
+  },
+  "mappings": {
+    "properties": {
+      "BPMN_Modeler" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "FileName" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "TotalElements" : {
+        "type" : "long"
+      },
+      "nAdHocSubProcess" : {
+        "type" : "long"
+      },
+      "nAssociation" : {
+        "type" : "long"
+      },
+      "nBoundaryCancelEvent" : {
+        "type" : "long"
+      },
+      "nBoundaryCompensateEvent" : {
+        "type" : "long"
+      },
+      "nBoundaryConditionalEvent" : {
+        "type" : "long"
+      },
+      "nBoundaryConditionalEventNonInt" : {
+        "type" : "long"
+      },
+      "nBoundaryErrorEvent" : {
+        "type" : "long"
+      },
+      "nBoundaryEscalationEvent" : {
+        "type" : "long"
+      },
+      "nBoundaryEscalationEventNonInt" : {
+        "type" : "long"
+      },
+      "nBoundaryMessageEvent" : {
+        "type" : "long"
+      },
+      "nBoundaryMessageEventNonInt" : {
+        "type" : "long"
+      },
+      "nBoundarySignalEvent" : {
+        "type" : "long"
+      },
+      "nBoundaryTimerEvent" : {
+        "type" : "long"
+      },
+      "nBoundaryTimerEventNonInt" : {
+        "type" : "long"
+      },
+      "nBusinessRuleTask" : {
+        "type" : "long"
+      },
+      "nCallActivity" : {
+        "type" : "long"
+      },
+      "nCallConversation" : {
+        "type" : "long"
+      },
+      "nChoreographyParticipant" : {
+        "type" : "long"
+      },
+      "nChoreographySubprocess" : {
+        "type" : "long"
+      },
+      "nChoreographyTask" : {
+        "type" : "long"
+      },
+      "nCollapsedSubProcess" : {
+        "type" : "long"
+      },
+      "nComplexGateway" : {
+        "type" : "long"
+      },
+      "nConditionalFlow" : {
+        "type" : "long"
+      },
+      "nConversation" : {
+        "type" : "long"
+      },
+      "nConversationLink" : {
+        "type" : "long"
+      },
+      "nDataObject" : {
+        "type" : "long"
+      },
+      "nDataStore" : {
+        "type" : "long"
+      },
+      "nDefaultFlow" : {
+        "type" : "long"
+      },
+      "nEndCancelEventDefinition" : {
+        "type" : "long"
+      },
+      "nEndCompensateEventDefinition" : {
+        "type" : "long"
+      },
+      "nEndErrorEventDefinition" : {
+        "type" : "long"
+      },
+      "nEndEscalationEventDefinition" : {
+        "type" : "long"
+      },
+      "nEndEventNone" : {
+        "type" : "long"
+      },
+      "nEndMessageEventDefinition" : {
+        "type" : "long"
+      },
+      "nEndMultipleEventDefinition" : {
+        "type" : "long"
+      },
+      "nEndSignalEventDefinition" : {
+        "type" : "long"
+      },
+      "nEndTerminateEventDefinition" : {
+        "type" : "long"
+      },
+      "nEventBasedGateway" : {
+        "type" : "long"
+      },
+      "nExclusiveGateway" : {
+        "type" : "long"
+      },
+      "nExpandedSubProcess" : {
+        "type" : "long"
+      },
+      "nGroup" : {
+        "type" : "long"
+      },
+      "nInclusiveGateway" : {
+        "type" : "long"
+      },
+      "nIntermediateCatchConditionalEventDefinition" : {
+        "type" : "long"
+      },
+      "nIntermediateCatchLinkEventDefinition" : {
+        "type" : "long"
+      },
+      "nIntermediateCatchMessageEventDefinition" : {
+        "type" : "long"
+      },
+      "nIntermediateCatchMultipleEventDefinition" : {
+        "type" : "long"
+      },
+      "nIntermediateCatchMultipleParallelEventDefinition" : {
+        "type" : "long"
+      },
+      "nIntermediateCatchSignalEventDefinition" : {
+        "type" : "long"
+      },
+      "nIntermediateCatchTimerEventDefinition" : {
+        "type" : "long"
+      },
+      "nIntermediateThrowCompensateEventDefinition" : {
+        "type" : "long"
+      },
+      "nIntermediateThrowEscalationEventDefinition" : {
+        "type" : "long"
+      },
+      "nIntermediateThrowLinkEventDefinition" : {
+        "type" : "long"
+      },
+      "nIntermediateThrowMessageEventDefinition" : {
+        "type" : "long"
+      },
+      "nIntermediateThrowMultipleEventDefinition" : {
+        "type" : "long"
+      },
+      "nIntermediateThrowNoneEvent" : {
+        "type" : "long"
+      },
+      "nIntermediateThrowSignalEventDefinition" : {
+        "type" : "long"
+      },
+      "nLane" : {
+        "type" : "long"
+      },
+      "nManualTask" : {
+        "type" : "long"
+      },
+      "nMessage" : {
+        "type" : "long"
+      },
+      "nMessageFlow" : {
+        "type" : "long"
+      },
+      "nParallelGateway" : {
+        "type" : "long"
+      },
+      "nPool" : {
+        "type" : "long"
+      },
+      "nReceiveTask" : {
+        "type" : "long"
+      },
+      "nScriptTask" : {
+        "type" : "long"
+      },
+      "nSendTask" : {
+        "type" : "long"
+      },
+      "nSequenceFlow" : {
+        "type" : "long"
+      },
+      "nServiceTask" : {
+        "type" : "long"
+      },
+      "nStartCancelEventDefinition" : {
+        "type" : "long"
+      },
+      "nStartCompensateEventDefinition" : {
+        "type" : "long"
+      },
+      "nStartConditionalEventDefinition" : {
+        "type" : "long"
+      },
+      "nStartErrorEventDefinition" : {
+        "type" : "long"
+      },
+      "nStartEscalationEventDefinition" : {
+        "type" : "long"
+      },
+      "nStartMessageEventDefinition" : {
+        "type" : "long"
+      },
+      "nStartMultipleEventDefinition" : {
+        "type" : "long"
+      },
+      "nStartMultipleParallelEventDefinition" : {
+        "type" : "long"
+      },
+      "nStartNoneEvent" : {
+        "type" : "long"
+      },
+      "nStartSignalEventDefinition" : {
+        "type" : "long"
+      },
+      "nStartTimerEventDefinition" : {
+        "type" : "long"
+      },
+      "nSubConversation" : {
+        "type" : "long"
+      },
+      "nTask" : {
+        "type" : "long"
+      },
+      "nTaskLoopActivity" : {
+        "type" : "long"
+      },
+      "nTaskMultipleIstance" : {
+        "type" : "long"
+      },
+      "nTextAnnotation" : {
+        "type" : "long"
+      },
+      "nTransaction" : {
+        "type" : "long"
+      },
+      "nUserTask" : {
+        "type" : "long"
+      },
+      "processDefinitionId" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "processDefinitionKey" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "processDefinitionVersion" : {
+        "type" : "long"
+      },
+      "processInstanceHistory" : {
+        "properties" : {
+          "countProcessInstance" : {
+            "type" : "long"
+          },
+          "maxProcessDurationInMillis" : {
+            "type" : "long"
+          },
+          "meanProcessDurationInMillis" : {
+            "type" : "long"
+          },
+          "minProcessDurationInMillis" : {
+            "type" : "long"
+          }
+        }
+      },
+      "taskHistory" : {
+        "properties" : {
+          "Approve Invoice" : {
+            "properties" : {
+              "countTaskInstance" : {
+                "type" : "long"
+              },
+              "maxTaskDurationInMillis" : {
+                "type" : "long"
+              },
+              "meanTaskDurationInMillis" : {
+                "type" : "long"
+              },
+              "minTaskDurationInMillis" : {
+                "type" : "long"
+              }
+            }
+          },
+          "Assign Reviewer" : {
+            "properties" : {
+              "countTaskInstance" : {
+                "type" : "long"
+              },
+              "maxTaskDurationInMillis" : {
+                "type" : "long"
+              },
+              "meanTaskDurationInMillis" : {
+                "type" : "long"
+              },
+              "minTaskDurationInMillis" : {
+                "type" : "long"
+              }
+            }
+          },
+          "Review Invoice" : {
+            "properties" : {
+              "countTaskInstance" : {
+                "type" : "long"
+              },
+              "maxTaskDurationInMillis" : {
+                "type" : "long"
+              },
+              "meanTaskDurationInMillis" : {
+                "type" : "long"
+              },
+              "minTaskDurationInMillis" : {
+                "type" : "long"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+DELETE /processes

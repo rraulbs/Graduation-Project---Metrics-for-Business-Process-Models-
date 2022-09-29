@@ -1,0 +1,3 @@
+"processDefinitionKey","processDefinitionId","processDefinitionVersion","minProcessDurationInMillis","meanProcessDurationInMillis","maxProcessDurationInMillis","countProcessInstance"
+"invoice","invoice:2:18142324-2170-11ed-9e28-0242ac120007","2","14635182","425162956.25","1228856147","4"
+"ReviewInvoice","ReviewInvoice:1:17fc7c6d-2170-11ed-9e28-0242ac120007","1","5162760","5162760","5162760","1"
