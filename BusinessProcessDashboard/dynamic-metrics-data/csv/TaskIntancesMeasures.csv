@@ -1,0 +1,7 @@
+"processDefinitionKey","processDefinitionId","processDefinitionVersion","taskName","minTaskDurationInMillis","meanTaskDurationInMillis","maxTaskDurationInMillis","countTaskInstance"
+"ReviewInvoice","ReviewInvoice:1:17fc7c6d-2170-11ed-9e28-0242ac120007","1","Review Invoice","22758","22758","22758","1"
+"ReviewInvoice","ReviewInvoice:1:17fc7c6d-2170-11ed-9e28-0242ac120007","1","Assign Reviewer","5140133","5140133","5140133","1"
+"invoice","invoice:2:18142324-2170-11ed-9e28-0242ac120007","2","Approve Invoice","14490633","418873285.5","1209600159","4"
+"invoice","invoice:2:18142324-2170-11ed-9e28-0242ac120007","2","Prepare
+Bank
+Transfer","144104","6665311.666666667","19256119","3"

@@ -1,0 +1,12 @@
+{"update":{"_id":"invoice_2","_index":"processes"}}
+{"doc":{"processDefinitionKey":"invoice","processDefinitionId":"invoice:2:18142324-2170-11ed-9e28-0242ac120007","processDefinitionVersion":2,"processInstanceHistory":{"minProcessDurationInMillis":14635182,"meanProcessDurationInMillis":425162956,"maxProcessDurationInMillis":1228856147,"countProcessInstance":4}}}
+{"update":{"_id":"ReviewInvoice_1","_index":"processes"}}
+{"doc":{"processDefinitionKey":"ReviewInvoice","processDefinitionId":"ReviewInvoice:1:17fc7c6d-2170-11ed-9e28-0242ac120007","processDefinitionVersion":1,"processInstanceHistory":{"minProcessDurationInMillis":5162760,"meanProcessDurationInMillis":5162760,"maxProcessDurationInMillis":5162760,"countProcessInstance":1}}}
+{"update":{"_id":"ReviewInvoice_1","_index":"processes"}}
+{"doc":{"taskHistory":{"Review Invoice":{"minTaskDurationInMillis":22758,"meanTaskDurationInMillis":22758,"maxTaskDurationInMillis":22758,"countTaskInstance":1}}}}
+{"update":{"_id":"ReviewInvoice_1","_index":"processes"}}
+{"doc":{"taskHistory":{"Assign Reviewer":{"minTaskDurationInMillis":5140133,"meanTaskDurationInMillis":5140133,"maxTaskDurationInMillis":5140133,"countTaskInstance":1}}}}
+{"update":{"_id":"invoice_2","_index":"processes"}}
+{"doc":{"taskHistory":{"Approve Invoice":{"minTaskDurationInMillis":14490633,"meanTaskDurationInMillis":418873286,"maxTaskDurationInMillis":1209600159,"countTaskInstance":4}}}}
+{"update":{"_id":"invoice_2","_index":"processes"}}
+{"doc":{"taskHistory":{"Prepare\nBank\nTransfer":{"minTaskDurationInMillis":144104,"meanTaskDurationInMillis":6665312,"maxTaskDurationInMillis":19256119,"countTaskInstance":3}}}}
