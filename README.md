@@ -3,6 +3,10 @@
 # :point_right: Getting Started
 This page will bring you up to speed with the needed configurations and softwares to start working on the project.
 
+:point_right: TCC under construction <br>
+[TCC docx file](https://docs.google.com/document/d/1BysZ3pjn0-PcL1qIEScmn1V06GlOL9r0/edit?usp=sharing&ouid=110301582211378789550&rtpof=true&sd=true) <br>
+[TCC docx folder](https://drive.google.com/drive/folders/1IzSIQ83TH5ybiDPMLaCY3Ep-VRowRH26?usp=sharing)
+
 # :point_right: Setup
 
 :heavy_check_mark: Make sure you have an editor to work with code like VSCode or another one of your choice. <br>
