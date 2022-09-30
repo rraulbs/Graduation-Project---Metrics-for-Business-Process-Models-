@@ -3,8 +3,8 @@
 # :point_right: Getting Started
 This page will bring you up to speed with the needed configurations and softwares to start working on the project.
 
-:point_right: Click here to access the Final paper (TCC)
-[TCC pdf file](Coming soon)
+:point_right: Click here to access the Final paper (TCC) <br>
+[TCC (pdf file) - WIP]()
 
 # :point_right: Setup
 
