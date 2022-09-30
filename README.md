@@ -3,9 +3,8 @@
 # :point_right: Getting Started
 This page will bring you up to speed with the needed configurations and softwares to start working on the project.
 
-:point_right: TCC under construction <br>
-[TCC docx file](https://docs.google.com/document/d/1BysZ3pjn0-PcL1qIEScmn1V06GlOL9r0/edit?usp=sharing&ouid=110301582211378789550&rtpof=true&sd=true) <br>
-[TCC docx folder](https://drive.google.com/drive/folders/1IzSIQ83TH5ybiDPMLaCY3Ep-VRowRH26?usp=sharing)
+:point_right: Click here to access the Final paper (TCC)
+[TCC pdf file](Coming soon)
 
 # :point_right: Setup
 
