@@ -25,7 +25,7 @@ https://docs.docker.com/compose/install/compose-desktop/
 - [X] :dvd: docker.elastic.co/elasticsearch/elasticsearch:8.0.0 <br>
 - [X] :dvd: docker.elastic.co/kibana/kibana:8.0.0 <br>
 - [X] :dvd: mysql:5.6 <br>
-- [X] :dvd: camunda/camunda-bpm-platform:latest <br>
+- [X] :dvd: camunda/camunda-bpm-platform:7.17.0 <br>
 - [X] :dvd: luarhub/staticmetrics <br>
 - [X] :dvd: luarhub/dynamicmetrics <br>
 
@@ -74,12 +74,12 @@ To have access to the services, open a web browser and enter the following ports
 
 1. **Model the process through Camunda Modeler** <br>
 1. **Save the xml file** <br>
-   - Id: ```<ProcessName>_<Version> ``` <br>
-***p.s.*** The Id must have this format above, to map the process_id in later steps. <br>
-***p.s.*** The file name, must have this same id format <br>
+   - Id: ```<Process Id>_<Process Version> ``` <br>
+***p.s.*** The file name, must have this format <br>
 ***p.s.*** Save the xml file in the following path: <br>
 ***``` C:\...\Graduation-Project---Metrics-for-Business-Process-Models-\BusinessProcessDashboard\static-metrics-data\processes\ ```***
-![image](https://user-images.githubusercontent.com/16651018/172481331-c91de7cd-5fa5-4983-a8fd-376d74f8ef6d.png)
+![image](https://user-images.githubusercontent.com/16651018/193163350-ae08b542-033b-4d54-a1c2-96baa24449db.png)
+
 
 3. **Update Kibana** <br>
 To send the project's static metrics to Kibana, perform the following step
