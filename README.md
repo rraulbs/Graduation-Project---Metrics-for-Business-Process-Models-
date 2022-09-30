@@ -176,7 +176,3 @@ Give it a title and save.
   <img width="1000" height="500" src="https://user-images.githubusercontent.com/16651018/172965740-81b4d092-f457-496a-a2e8-1d6077c0d966.png">
 </p>
 
-### Configure graphics for tasks
-For a tutorial on how to set up a table chart for the tasks of a process, click [here]() 🚧 Link 🚀 Under construction...  🚧
-
-Thank you.
